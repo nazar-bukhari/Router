@@ -117,10 +117,10 @@ public class BroadCast extends Thread {
     public void DisplayTable(Model model) {
 
         System.out.println();
-        System.out.println("Destination   Link-Cost (From Receiver)");
-        System.out.println("From R1");
+        System.out.println("Destination    Link-Cost (From Receiver)");
+        System.out.println("From Router-1");
         System.out.println("-------------------------------");
-        System.out.println(model.getRouterZero() + "       " + model.getWeightRZero());
+        System.out.println(model.getRouterZero() + "            " + model.getWeightRZero());
         System.out.println(model.getRouterOne() + "            " + model.getWeightROne());
         System.out.println(model.getRouterTwo() + "            " + model.getWeightRTwo());
         System.out.println(model.getRouterThree() + "            " + model.getWeightRThree());
