@@ -125,5 +125,21 @@ public class BroadCast extends Thread {
         System.out.println(model.getRouterTwo() + "            " + model.getWeightRTwo());
         System.out.println(model.getRouterThree() + "            " + model.getWeightRThree());
 
+        /**
+         * Writing into file (Information From R1)
+         */
+        try {
+            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("pathInformation.txt", true)));
+            out.println();
+            out.println(model.getRouterOne()+" "+model.getRouterZero()+" "+model.getWeightRZero());
+            out.print(model.getRouterOne()+" "+model.getRouterTwo()+" "+model.getWeightRTwo());
+            out.close();
+
+            new BellmanFord();
+
+        }catch (IOException e) {
+            System.out.println("Exception while writing into file");
+        }
+
     }
 }
